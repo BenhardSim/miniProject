@@ -1,4 +1,142 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #F2EAD3;
+}
+
 .cont{
     display: flex;
     flex-direction: row;
+    background-color: #F2EAD3;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.input-txt{
+    padding: 8px;
+    width: 600px;
+    border-style: none;
+    border-radius: 8px;
+}
+
+.profile{
+    width: 250px;
+    background-color: #EE6F57;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+}
+
+.img-prof{
+    background-color: white;
+    border-radius: 100px;
+    width: 180px;
+    height: 180px;
+    margin-top: 60px;
+}
+
+.form-input{
+    padding: 10px;
+}
+
+.btn-submit{
+    border-style: none;
+    padding: 10px;
+    background-color: #3CA64D;
+    color: white;
+    border-radius: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.btn-cancel{
+    border-style: none;
+    padding: 10px;
+    background-color: #B53B3B;
+    color: white;
+    border-radius: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.btn-cont{
+    text-align: right;
+}
+
+.error{
+    color: red;
+    font-size: 10px;
+}
+/* ====================================================================== css julius ============================================================== */
+
+.box {
+    background-color: #F2EAD3;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header {
+    width: 106px;
+    height: 15px;
+    left: 25px;
+    top: 22px;
+
+
+    color: #000000;
+}
+
+.label {
+    width: 24px;
+    height: 15px;
+    left: 36px;
+    top: 82px;
+
+
+
+    color: #000000;
+}
+
+.input {
+    width: 652px;
+    height: 26px;
+    left: 159px;
+    top: 76px;
+
+    background: #FFFFFF;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.input_drop {
+    width: 660px;
+    height: 26px;
+    left: 159px;
+    top: 76px;
+
+    background: #FFFFFF;
+    border-radius: 5px white;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.input_tanggal {
+    width: 656px;
+    height: 26px;
+    left: 159px;
+    top: 76px;
+
+    background: #FFFFFF;
+    border-radius: 5px white;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
