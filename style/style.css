@@ -14,17 +14,19 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    /* transform: scale(0.8); */
+    zoom: 0.8;
 }
 
 .input-txt{
     padding: 8px;
-    width: 600px;
+    width: 550px;
     border-style: none;
     border-radius: 8px;
 }
 
 .profile{
-    width: 250px;
+    width: 200px;
     background-color: #EE6F57;
     border-radius: 8px;
     display: flex;
@@ -34,8 +36,8 @@ body{
 .img-prof{
     background-color: white;
     border-radius: 100px;
-    width: 180px;
-    height: 180px;
+    width: 130px;
+    height: 130px;
     margin-top: 60px;
 }
 
@@ -140,3 +142,87 @@ body{
     margin-top: 5px;
     margin-bottom: 5px;
 }
+
+/* =========================== CSS faqih ============================================= */
+
+    .flexbox-container {
+        display: flex;
+        margin: auto auto;
+    }
+
+    .flexbox-item {
+        width: 170px;
+        margin: 10px;
+        border: 3px;
+    }
+
+    .text-center {
+        margin: auto 10 auto 10;
+        justify-content: center;
+    }
+
+    .flexbox-item-1 {
+        min-height: 300px;
+        border-radius: 8px !important;
+        background-color: #EE6F57;
+    }
+
+    .flexbox-item-2 {
+        /* min-height: 480px; */
+        width: 100%;
+    }
+
+    .form-control {
+        width: 400px;
+        padding: 8px;
+        border-width: 0px;
+        border-radius: 50px;
+    }
+
+    .img-account-profile {
+        margin-top: 40px;
+        margin-left: 35px;
+        height: 10rem;
+    }
+
+    .rounded-circle {
+        width: 100px;
+        height: 100px;
+    }
+
+    .card {
+        /* box-shadow: 0 0.15rem 1.75rem 0 rgb(33 40 50 / 15%); */
+        border-right-width: 1px
+    }
+
+    .btn {
+        background-color: blue;
+        border-radius: 5px;
+        border-style: none;
+        width: 70%;
+        color: white;
+        padding: 10px;
+        margin-left: 168%;
+    }
+
+
+    /* ===================== Style Gybran ============================================== */
+
+    article {
+        margin: 20px;
+        padding: 0;
+        background-color: #ffffff;
+    }
+    
+    article.detail {
+        margin-top: 20px;
+    }
+    
+    .container {
+        padding: 0;
+        /* box-shadow: ; */
+    }
+    
+    .horizontal-center {
+        margin: 0 auto;
+    }

@@ -133,7 +133,7 @@ if (isset($_GET['submit'])) {
             </div>
             <div class="error"><?php if (isset($error_name)) echo $error_name; ?></div>
             <br>
-            
+
             <!-- drop down -->
             <div>
                 <label for="jenis_kelamin">Jenis Kelamin : </label><br>

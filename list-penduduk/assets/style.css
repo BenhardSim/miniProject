@@ -1,0 +1,22 @@
+body {
+    background-color: #eaf6f6;
+}
+
+article {
+    margin: 20px;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+article.detail {
+    margin-top: 20px;
+}
+
+.container {
+    padding: 0;
+    /* box-shadow: ; */
+}
+
+.horizontal-center {
+    margin: 0 auto;
+}
