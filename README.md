@@ -12,7 +12,7 @@
 ### add penduduk
 - [x] UI/UX
 - [x] code front-end
-- [ ] koneksi PHP
+- [x] koneksi PHP
 ### detail penduduk
 - [x] UI/UX
 - [x] code front-end
