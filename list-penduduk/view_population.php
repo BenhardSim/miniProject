@@ -48,7 +48,7 @@
 
         <br />
         <div class="container horizontal-center">
-            <a href="add_penduduk.php" class="btn btn-primary">+ Add Data Penduduk</a> <br />
+            <a href="../form/add_penduduk.php" class="btn btn-primary">+ Add Data Penduduk</a> <br />
         </div>
 
         <article class="container list-penduduk text-center">

@@ -1,6 +1,6 @@
 <?php
 require_once('../lib/db_login.php');
-$id =     "100299111165482";
+$id = $_GET['nik'];
 
 $query = 'SELECT * FROM tb_penduduk WHERE NIK="' . $id . '"';
 
