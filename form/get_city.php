@@ -7,7 +7,8 @@ if (!$result) {
     die('query salah !!');
 } else {
     // echo 'nice';
-    echo '<select class="input-txt" name="kota" id="kota" required>';
+    echo '<label for="kota">Daftar Kota : </label><br>';
+    echo '<select class="input-txt" name="kota" id="kota" required onchange="cityBtn(this.value)">';
     while ($row = $result->fetch_object()) {
         if (isset($kota) && $kota == $row->Kode_Kota) {
             echo '<option value="' . $row->Kode_Kota . '" selected=true>' . $row->Nama_Kota . '</option>';

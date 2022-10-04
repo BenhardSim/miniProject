@@ -1,9 +1,9 @@
-body{
+body {
     font-family: 'Poppins', sans-serif;
-    background-color: #F2EAD3;
+    background-color: #F2EAD3 !important;
 }
 
-.cont{
+.cont {
     display: flex;
     flex-direction: row;
     background-color: #F2EAD3;
@@ -18,14 +18,14 @@ body{
     zoom: 0.8;
 }
 
-.input-txt{
+.input-txt {
     padding: 8px;
     width: 550px;
     border-style: none;
     border-radius: 8px;
 }
 
-.profile{
+.profile {
     width: 200px;
     background-color: #EE6F57;
     border-radius: 8px;
@@ -33,7 +33,7 @@ body{
     justify-content: center;
 }
 
-.img-prof{
+.img-prof {
     background-color: white;
     border-radius: 100px;
     width: 130px;
@@ -41,11 +41,11 @@ body{
     margin-top: 60px;
 }
 
-.form-input{
+.form-input {
     padding: 10px;
 }
 
-.btn-submit{
+.btn-submit {
     border-style: none;
     padding: 10px;
     background-color: #3CA64D;
@@ -55,7 +55,7 @@ body{
     padding-right: 20px;
 }
 
-.btn-cancel{
+.btn-cancel {
     border-style: none;
     padding: 10px;
     background-color: #B53B3B;
@@ -65,14 +65,46 @@ body{
     padding-right: 20px;
 }
 
-.btn-cont{
+.btn-cont {
     text-align: right;
 }
 
-.error{
+.error {
     color: red;
     font-size: 10px;
 }
+
+.cont-drop {
+    margin: 0;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.prov-drop, .city-drop{
+    border: 1px groove black;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #E1CEB5;
+    margin-top: 20px;
+}
+
+.prov-drop label, .city-drop label{
+    margin-bottom: 30px;
+}
+
+.src-btn{
+    margin-top: 20px;
+    width: 100%;
+    border-style: none;
+    padding: 6px;
+    border-radius: 8px;
+    background-color: #06283D;
+    color: white;
+}
+
 /* ====================================================================== css julius ============================================================== */
 
 .box {
@@ -145,84 +177,84 @@ body{
 
 /* =========================== CSS faqih ============================================= */
 
-    .flexbox-container {
-        display: flex;
-        margin: auto auto;
-    }
+.flexbox-container {
+    display: flex;
+    margin: auto auto;
+}
 
-    .flexbox-item {
-        width: 170px;
-        margin: 10px;
-        border: 3px;
-    }
+.flexbox-item {
+    width: 170px;
+    margin: 10px;
+    border: 3px;
+}
 
-    .text-center {
-        margin: auto 10 auto 10;
-        justify-content: center;
-    }
+.text-center {
+    margin: auto 10 auto 10;
+    justify-content: center;
+}
 
-    .flexbox-item-1 {
-        min-height: 300px;
-        border-radius: 8px !important;
-        background-color: #EE6F57;
-    }
+.flexbox-item-1 {
+    min-height: 300px;
+    border-radius: 8px !important;
+    background-color: #EE6F57;
+}
 
-    .flexbox-item-2 {
-        /* min-height: 480px; */
-        width: 100%;
-    }
+.flexbox-item-2 {
+    /* min-height: 480px; */
+    width: 100%;
+}
 
-    .form-control {
-        width: 400px;
-        padding: 8px;
-        border-width: 0px;
-        border-radius: 50px;
-    }
+.form-control {
+    width: 400px;
+    padding: 8px;
+    border-width: 0px;
+    border-radius: 50px;
+}
 
-    .img-account-profile {
-        margin-top: 40px;
-        margin-left: 35px;
-        height: 10rem;
-    }
+.img-account-profile {
+    margin-top: 40px;
+    margin-left: 35px;
+    height: 10rem;
+}
 
-    .rounded-circle {
-        width: 100px;
-        height: 100px;
-    }
+.rounded-circle {
+    width: 100px;
+    height: 100px;
+}
 
-    .card {
-        /* box-shadow: 0 0.15rem 1.75rem 0 rgb(33 40 50 / 15%); */
-        border-right-width: 1px
-    }
+.card {
+    /* box-shadow: 0 0.15rem 1.75rem 0 rgb(33 40 50 / 15%); */
+    border-right-width: 1px
+}
 
-    .btn {
-        background-color: blue;
-        border-radius: 5px;
-        border-style: none;
-        width: 70%;
-        color: white;
-        padding: 10px;
-        margin-left: 168%;
-    }
+.btn {
+    background-color: blue;
+    border-radius: 5px;
+    border-style: none;
+    width: 70%;
+    color: white;
+    padding: 10px;
+    margin-left: 168%;
+}
 
 
-    /* ===================== Style Gybran ============================================== */
+/* ===================== Style Gybran ============================================== */
 
-    article {
-        margin: 20px;
-        padding: 0;
-        background-color: #ffffff;
-    }
-    
-    article.detail {
-        margin-top: 20px;
-    }
-    
-    .container {
-        padding: 0;
-        /* box-shadow: ; */
-    }
-    
-    .horizontal-center {
-        margin: 0 auto;
-    }
+article {
+    margin: 20px;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+article.detail {
+    margin-top: 20px;
+}
+
+.container {
+    padding: 0;
+    /* box-shadow: ; */
+}
+
+.horizontal-center {
+    margin: 0 auto;
+}
