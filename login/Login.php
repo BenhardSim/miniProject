@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-require_once('db_login.php');
+require_once('../lib/db_login.php');
 
 
 if (isset($_POST["submit"])){
@@ -33,7 +33,7 @@ if (isset($_POST["submit"])){
         } else{
             if ($result->num_rows>0){ 
                 $_SESSION['username'] = $email;
-                header('Location: search_penduduk.php');
+                header('Location: ../form/search_penduduk.php');
                 exit;
             }else{ 
                 echo '<span class="error">Combination of username and password are not correct.</span>';

@@ -36,7 +36,7 @@ include('../header.html')
     <div id="drop_down_city" class="city-drop">
         <label for="kota">Daftar Kota : </label><br>
         <select class="input-txt" name="kota" id="kota" onchange="cityBtn(this.value)">
-            <option value="kosong">--- Pilih Kota ---</option>
+            <option value="kosong" selected>--- Pilih Kota ---</option>
             <?php
             $queryCity = "select * from tb_kota where Asal_Provinsi='" . $provinsi . "'";
             $result = $db->query($queryCity);

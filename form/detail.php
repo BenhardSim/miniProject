@@ -27,7 +27,9 @@ if (!$result) {
 <?php include('../header.html') ?>
 <section class="cont">
     <div class="profile">
-        <div class="img-prof"></div>
+        <div class="img-prof">
+            <img style="width:100%;" src="../style/empty-profile.png" alt="">
+        </div>
     </div>
     <div class="form-input">
         <form action="">

@@ -77,7 +77,7 @@
                                 echo "<td>" . $row->Jenis_Kelamin . "</td>";
                                 echo "<td><a href='../form/detail.php?nik=".$row->NIK."' class='btn btn-primary'>Detail</a> ";
                                 echo "<a href='../form/edit_penduduk.php?nik=".$row->NIK."' class='btn btn-warning'>Edit</a> ";
-                                echo "<a class='btn btn-danger'>Hapus</a></td>";
+                                echo "<a href='../form/confirm_delete.php?id=".$row->NIK."&kode_kota=".$kode_kota."' class='btn btn-danger'>Hapus</a></td>";
                                 echo "</tr>";
                             }
                             $result->free();
