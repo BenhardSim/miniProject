@@ -34,6 +34,9 @@ CREATE TABLE `tb_admin` (
   `Password` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+INSERT INTO `tb_admin` (`NIP`, `Nama`, `Email`, `Password`, `Walikota`) VALUES
+(124215987987, 'Kelompok PBP', 'kelpbp@gmail.com', 'kelpbp123'),
+
 -- --------------------------------------------------------
 
 --
