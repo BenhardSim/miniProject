@@ -254,7 +254,7 @@ if (isset($_GET['save'])) {
                     <td>
                         <button type="submit" class="btn-submit" name="save" value="save" id="save">Save</button><a href="view_population.php">
                     </td>
-                    <td><button type="button" class="btn-cancel" name="cancel" value="cancel">Cancel</button></a></td>
+                    <td><button onclick="javascript:history.back()" type="button" class="btn-cancel" name="cancel" value="cancel">Cancel</button></a></td>
                 </tr>
             </table>
         </form>

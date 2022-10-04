@@ -227,7 +227,7 @@ if (isset($_GET['submit'])) {
             <div class="error"><?php if (isset($error_job)) echo $error_job; ?></div>
             <br>
             <div class="btn-cont">
-                <button class="btn-cancel" name="submit" type="button">Cancel</button>
+                <button onclick="javascript:history.back()" class="btn-cancel" name="submit" type="button">Cancel</button>
                 <button class="btn-submit" name="submit" id="submit" type="submit">Edit</button>
             </div>
         </form>

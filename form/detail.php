@@ -35,8 +35,8 @@ if (!$result) {
                 <label>NIK :</label><br>
                 <label class="form-check-label">
                     <input class="input-txt" id="inputNIK" type="text" value="<?php if (isset($NIK)) {
-                                                                                        echo $NIK;
-                                                                                    } ?>" disabled>
+                                                                                    echo $NIK;
+                                                                                } ?>" disabled>
 
             </div>
             <br>
@@ -44,8 +44,8 @@ if (!$result) {
             <div class="form-check">
                 <label class="form-check-label">
                     <input class="input-txt" id="inputName" type="text" value="<?php if (isset($Nama)) {
-                                                                                        echo $Nama;
-                                                                                    } ?>" disabled>
+                                                                                    echo $Nama;
+                                                                                } ?>" disabled>
 
             </div>
             <br>
@@ -62,8 +62,8 @@ if (!$result) {
                 <label>Provinsi :</label><br>
                 <label class="form-check-label">
                     <input class="input-txt" id="inputProvince" type="text" value="<?php if (isset($Provinsi)) {
-                                                                                            echo $Provinsi;
-                                                                                        } ?>" disabled>
+                                                                                        echo $Provinsi;
+                                                                                    } ?>" disabled>
 
             </div>
             <br>
@@ -71,8 +71,8 @@ if (!$result) {
                 <label>Kota :</label><br>
                 <label class="form-check-label">
                     <input class="input-txt" id="inputCity" type="text" value="<?php if (isset($Kota)) {
-                                                                                        echo $Kota;
-                                                                                    } ?>" disabled>
+                                                                                    echo $Kota;
+                                                                                } ?>" disabled>
 
             </div>
             <br>
@@ -80,8 +80,8 @@ if (!$result) {
                 <label>Tanggal Lahir :</label><br>
                 <label class="form-check-label">
                     <input class="input-txt" id="inputBirthdayDate" type="text" value="<?php if (isset($Tanggal_Lahir)) {
-                                                                                                echo $Tanggal_Lahir;
-                                                                                            } ?>" disabled>
+                                                                                            echo $Tanggal_Lahir;
+                                                                                        } ?>" disabled>
 
             </div>
             <br>
@@ -89,8 +89,8 @@ if (!$result) {
                 <label>Status Perkawinan :</label><br>
                 <label class="form-check-label">
                     <input class="input-txt" id="inputFirstName" type="text" value="<?php if (isset($Status)) {
-                                                                                            echo $Status;
-                                                                                        } ?>" disabled>
+                                                                                        echo $Status;
+                                                                                    } ?>" disabled>
 
             </div>
             <br>
@@ -98,8 +98,8 @@ if (!$result) {
                 <label>Agama :</label><br>
                 <label class="form-check-label">
                     <input class="input-txt" id="inputReligion" type="text" value="<?php if (isset($Agama)) {
-                                                                                            echo $Agama;
-                                                                                        } ?>" disabled>
+                                                                                        echo $Agama;
+                                                                                    } ?>" disabled>
 
             </div>
             <br>
@@ -107,15 +107,15 @@ if (!$result) {
                 <label>Pekerjaan :</label><br>
                 <label class="form-check-label">
                     <input class="input-txt" id="inputReligion" type="text" value="<?php if (isset($Pekerjaan)) {
-                                                                                            echo $Pekerjaan;
-                                                                                        } ?>" disabled>
+                                                                                        echo $Pekerjaan;
+                                                                                    } ?>" disabled>
 
             </div>
             <br>
             <div class="btn-cont">
-                <button class="btn-submit" name="submit" id="submit" type="submit">Back</button>
+                <button onclick="javascript:history.back()" class="btn-submit" name="submit" id="submit" type="button">Back</button>
             </div>
-            </form>
+        </form>
     </div>
 </section>
 <?php
