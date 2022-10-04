@@ -35,7 +35,7 @@ CREATE TABLE `tb_admin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 INSERT INTO `tb_admin` (`NIP`, `Nama`, `Email`, `Password`) VALUES
-(1271112210020001, 'Kelompok PBP', 'kelpbp@gmail.com', 'kelpbp123'),
+(1271112210020001, 'Kelompok PBP', 'kelpbp@gmail.com', 'kelpbp123');
 
 -- --------------------------------------------------------
 
