@@ -20,7 +20,7 @@ function callAjax(url,inner){
     xmlhttp.send(null);
 }
 
-function provBtn(kode_prov){
+function provBtn(kode_prov){ 
     let inner = 'src-btn-cont-prov';
     let url = 'get_btn_prov.php?id=' + kode_prov;
     if(kode_prov != ''){

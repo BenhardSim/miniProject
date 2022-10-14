@@ -1,3 +1,9 @@
+<?php
+session_start();
+    if(!isset($_SESSION['username'])){
+        header("Location: ../login/login.php");
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,7 +51,7 @@
                 $kota = $_GET['kode_kota'];
                 header("Location: ../list-penduduk/view_population_city.php?kode_kota=".$kota."");
             }
-            header("Location: view_population_city.php?kode_kota=KST");
+            header("Location: search_penduduk.php");
         }
     }
     ?>
@@ -112,8 +118,8 @@
                 </div>
 
                 <br>
-                <a href="./">
-                    <button onclick="javascript:history.back()" type="submit" class="btn btn-primary" name="submit" value="submit">Confirm</button>
+                <a href="../form/search_penduduk.php">
+                    <button type="submit" class="btn btn-primary" name="submit" value="submit">Confirm</button>
                 </a>
                 <!-- <a href="view_customer.php" class="btn btn-secondary">Cancel</a> -->
 

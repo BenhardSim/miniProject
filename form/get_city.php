@@ -1,4 +1,10 @@
 <?php
+session_start();
+    if(!isset($_SESSION['username'])){
+        header("Location: ../login/login.php");
+    }
+?>
+<?php
 require_once('../lib/db_login.php');
 $provinsi = $db->real_escape_string($_GET['id']);
 $queryCity = "select * from tb_kota where Asal_Provinsi='" . $provinsi . "'";
@@ -20,5 +26,3 @@ if (!$result) {
 }
 
 $db->close();
-
-?>

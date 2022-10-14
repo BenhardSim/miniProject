@@ -20,3 +20,18 @@ article.detail {
 .horizontal-center {
     margin: 0 auto;
 }
+
+.prof-box{
+    display: flex;
+    background-color: white;
+    /* width: 500px; */
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    border-radius: 10px;
+}
+
+.rounded{
+    border-radius: 100000000px;
+}

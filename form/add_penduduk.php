@@ -1,16 +1,17 @@
 <?php
-// session_start();
-//     if(!isset($_SESSION['username'])){
-//         header("Location: login.php");
-//     }
+session_start();
+    if(!isset($_SESSION['username'])){
+        header("Location: ../login/login.php");
+    }
 ?>
-<?php include('../header.html'); ?>
+<?php include('../header.html') ?>
 <?php
 require_once('../lib/db_login.php');
 if (isset($_GET['save'])) {
     $valid = true;
 
     $nik = $_GET['nik'];
+
     if ($nik == '') {
         $error_nik = "NIK is required";
         $valid = false;
@@ -79,35 +80,36 @@ if (isset($_GET['save'])) {
          '" . $_GET['nik'] . "', 
          '" . $_GET['name'] . "',
          '" . $_GET['gender'] . "',
-         '" . $_GET['provinsi'] . "',
          '" . $_GET['kota'] . "',
+         '" . $_GET['provinsi'] . "',
          '" . $_GET['tanggal'] . "',
          '" . $_GET['kawin'] . "',
          '" . $_GET['agama'] . "', 
          '" . $_GET['job'] . "');
         ";
+        // echo $query;
         $result = $db->query($query);
 
         if (!$result) {
             die("Could not query the database: <br>" . $db->error . "<br>Query: " . $query);
         } else {
             $db->close();
-            header("Location: view_population.php");
+            header("Location: ../list-penduduk/view_population_city.php?kode_kota=".$_GET['kota']);
         }
     }
 }
 
 ?>
-<div class="box">
-    <div class="header">Isi Data Penduduk</div>
-    <div class="card-body">
+<div class="">
+    <div class="header" style="margin: 10px;"><h2>Isi Data Penduduk</h2></div>
+    <div class="card-body box2">
         <br>
         <form action="" autocomplete="on" method="GET">
 
             <table>
                 <tr>
-                    <td><label for="nik" class="label">NIK:</label></td>
-                    <td><input type="text" class="input" name="nik" id="nik" value="<?php if (isset($nik)) echo $nik; ?>"></td>
+                    <td><label for="nik" class="form-label">NIK : </label></td>
+                    <td><input type="text" class="form-control" name="nik" id="nik" value="<?php if (isset($nik)) echo $nik; ?>"></td>
                     <td>
                         <div class="error"><?php if (isset($error_nik)) echo $error_nik; ?></div>
                     </td>
@@ -115,8 +117,8 @@ if (isset($_GET['save'])) {
                 </tr>
 
                 <tr>
-                    <td><label for="name" class="label">Nama:</label></td>
-                    <td><input type="text" class="input" name="name" id="name" value="<?php if (isset($name)) echo $name; ?>"></td>
+                    <td><label for="name" class="form-label">Nama : </label></td>
+                    <td><input type="text" class="form-control" name="name" id="name" value="<?php if (isset($name)) echo $name; ?>"></td>
                     <td>
                         <div class="error"><?php if (isset($error_name)) echo $error_name; ?></div>
                     </td>
@@ -124,9 +126,9 @@ if (isset($_GET['save'])) {
                 </tr>
 
                 <tr>
-                    <td><label for="gender" class="label">Jenis Kelamin:</label></td>
+                    <td><label for="gender" class="form-label">Jenis Kelamin : </label></td>
                     <td>
-                        <select class="input_drop" name="gender" id="gender">
+                        <select class="form-control" name="gender" id="gender">
                             <option value="" <?php if (!isset($gender)) echo 'selected="true"'; ?>>--Pilih Jenis Kelamin--</option>
                             <option value="Pria" <?php if (isset($gender) && $gender == "Pria") echo 'selected="true"'; ?>>Pria</option>
                             <option value="Wanita" <?php if (isset($gender) && $gender == "Wanita") echo 'selected="true"'; ?>>Wanita</option>
@@ -138,9 +140,9 @@ if (isset($_GET['save'])) {
                 </tr>
 
                 <tr>
-                    <td><label for="provinsi" class="label">Provinsi</label></td>
+                    <td><label for="provinsi" class="form-label">Provinsi : </label></td>
                     <td>
-                        <select class="input_drop" name="provinsi" id="provinsi" onchange="getCity(this.value)">
+                        <select class="form-control" name="provinsi" id="provinsi" onchange="getCity(this.value)">
                             <option value="" <?php if (!isset($provinsi)) echo 'selected="true"'; ?>>--Pilih Provinsi--</option>
                             <?php
                             $queryProv = "select * from tb_provinsi";
@@ -165,7 +167,7 @@ if (isset($_GET['save'])) {
                 </tr>
 
                 <tr>
-                    <td><label for="kota" class="label">Kota:</label></td>
+                    <td><label for="kota" class="form-label">Kota : </label></td>
                     <td>
                         <div id="drop_down_city">
                             <?php
@@ -176,7 +178,7 @@ if (isset($_GET['save'])) {
                                     die('query salah !!');
                                 } else {
                                     // echo '<h1>nice</h1>';
-                                    echo '<select class="input_drop" name="kota" id="kota" required>';
+                                    echo '<select class="form-control" name="kota" id="kota" required>';
                                     while ($row = $result->fetch_object()) {
                                         if (isset($kota) && $kota == $row->Kode_Kota) {
                                             echo '<option value="' . $row->Kode_Kota . '" selected=true>' . $row->Nama_Kota . '</option>';
@@ -187,7 +189,7 @@ if (isset($_GET['save'])) {
                                     echo '</select>';
                                 }
                             } else {
-                                echo '<select class="input_drop" name="kota" id="kota">
+                                echo '<select class="form-control" name="kota" id="kota">
                                     <option value=""></option>
                                     </select>';
                             }
@@ -201,8 +203,8 @@ if (isset($_GET['save'])) {
                 </tr>
 
                 <tr>
-                    <td><label for="tanggal" class="label">Tanggal Lahir:</label></td>
-                    <td><input type="date" class="input_tanggal" name="tanggal" id="tanggal" value=""></td>
+                    <td><label for="tanggal" class="form-label">Tanggal Lahir : </label></td>
+                    <td><input type="date" class="form-control" name="tanggal" id="tanggal" value=""></td>
                     <td>
                         <div class="error"><?php if (isset($error_tanggal)) echo $error_tanggal; ?></div>
                     </td>
@@ -210,9 +212,9 @@ if (isset($_GET['save'])) {
                 </tr>
 
                 <tr>
-                    <td><label for="kawin" class="label">Status Kawin:</label></td>
+                    <td><label for="kawin" class="form-label">Status Kawin : </label></td>
                     <td>
-                        <select class="input_drop" name="kawin" id="kawin">
+                        <select class="form-control" name="kawin" id="kawin">
                             <option value="" <?php if (!isset($kawin)) echo 'selected="true"'; ?>>--Pilih Status Perkawinan--</option>
                             <option value="Kawin" <?php if (isset($kawin) && $kawin == "Kawin") echo 'selected="true"'; ?>>Kawin</option>
                             <option value="Belum Kawin" <?php if (isset($gender) && $gender == "Belum Kawin") echo 'selected="true"'; ?>>Belum Kawin</option>
@@ -224,9 +226,9 @@ if (isset($_GET['save'])) {
                 </tr>
 
                 <tr>
-                    <td><label for="agama" class="label">Agama:</label></td>
+                    <td><label for="agama" class="form-label">Agama : </label></td>
                     <td>
-                        <select class="input_drop" name="agama" id="agama">
+                        <select class="form-control" name="agama" id="agama">
                             <option value="" <?php if (!isset($agama)) echo 'selected="true"'; ?>>--Pilih Agama-</option>
                             <option value="Hindu" <?php if (isset($agama) && $agama == "Hindu") echo 'selected="true"'; ?>>Hindu</option>
                             <option value="Buddha" <?php if (isset($agama) && $agama == "Buddha") echo 'selected="true"'; ?>>Buddha</option>
@@ -241,8 +243,8 @@ if (isset($_GET['save'])) {
                 </tr>
 
                 <tr>
-                    <td><label for="job" class="label">Pekerjaan:</label></td>
-                    <td><input type="text" class="input" name="job" id="job" value=""></td>
+                    <td><label for="job" class="form-label">Pekerjaan:</label></td>
+                    <td><input type="text" class="form-control" name="job" id="job" value=""></td>
                     <td>
                         <div class="error"><?php if (isset($error_job)) echo $error_job; ?></div>
                     </td>
@@ -250,7 +252,7 @@ if (isset($_GET['save'])) {
                 </tr>
 
                 <tr>
-                    <br>
+                    <br><br>
                     <td>
                         <button type="submit" class="btn-submit" name="save" value="save" id="save">Save</button><a href="view_population.php">
                     </td>

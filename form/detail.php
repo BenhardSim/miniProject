@@ -1,4 +1,10 @@
 <?php
+session_start();
+    if(!isset($_SESSION['username'])){
+        header("Location: ../login/login.php");
+    }
+?>
+<?php
 require_once('../lib/db_login.php');
 $id = $_GET['nik'];
 
@@ -24,7 +30,7 @@ if (!$result) {
 <!DOCTYPE html>
 <html lang="en">
 
-<?php include('../header.html') ?>
+<?php include('../header.html'); ?>
 <section class="cont">
     <div class="profile">
         <div class="img-prof">

@@ -1,19 +1,16 @@
+<?php
+session_start();
+    if(!isset($_SESSION['username'])){
+        header("Location: ../login/login.php");
+    }
+?>
 <?php require_once('../lib/db_login.php');
 
-$nik = $_GET['nik'];
+
 
 // validasi nilai pada saat di submit
 if (isset($_GET['submit'])) {
     $valid = true;
-
-    $nik = $_GET['nik'];
-    if ($nik == '') {
-        $error_nik = "<p><b>NIK is required</p></b>";
-        $valid = false;
-    } elseif (!preg_match("/^[0-9]{16}$/", $nik)) {
-        $error_nik = "<p><b>NIS hanya dapat berisi angka dan digitnya harus 16</p></b>";
-        $valid = false;
-    }
 
     $name = $_GET['nama'];
     if ($name == '') {
@@ -69,29 +66,31 @@ if (isset($_GET['submit'])) {
 
     if ($valid) {
         $query = "
-        insert into `tb_penduduk`(`nik`, `nama`, `jenis_kelamin`, `kota`, `provinsi`, `tanggal_lahir`, `status`, `agama`, `pekerjaan`)
-        values
-        (
-         '" . $_GET['nik'] . "', 
-         '" . $_GET['nama'] . "',
-         '" . $_GET['jenis_kelamin'] . "',
-         '" . $_GET['provinsi'] . "',
-         '" . $_GET['kota'] . "',
-         '" . $_GET['tanggal_lahir'] . "',
-         '" . $_GET['status_pernikahan'] . "',
-         '" . $_GET['agama'] . "', 
-         '" . $_GET['pekerjaan'] . "');
+        update `tb_penduduk`
+        set 
+        nama = '" . $_GET['nama'] . "',
+        jenis_kelamin =  '" . $_GET['jenis_kelamin'] . "',
+        kota = '" . $_GET['kota'] . "',
+        provinsi =  '" . $_GET['provinsi'] . "',
+        tanggal_lahir =  '" . $_GET['tanggal_lahir'] . "',
+        status = '" . $_GET['status_pernikahan'] . "',
+        agama =  '" . $_GET['agama'] . "', 
+        pekerjaan =  '" . $_GET['pekerjaan'] . "'
+        where
+        nik = '" . $_GET['nik'] . "';
         ";
         $result = $db->query($query);
+        echo $result;
 
         if (!$result) {
             die("Could not query the database: <br>" . $db->error . "<br>Query: " . $query);
         } else {
             $db->close();
-            header("Location: view_population.php");
+            header("Location: ../list-penduduk/view_population_city.php?kode_kota=".$_GET['kota']);
         }
     }
 } else {
+    $nik = $_GET['nik'];
     $query = "select * from tb_penduduk where NIK='" . $nik . "'";
     $result = $db->query($query);
     if (!$result) {
@@ -124,7 +123,7 @@ if (isset($_GET['submit'])) {
         <form action="">
             <div>
                 <label for="NIK">NIK : </label><br>
-                <input type="text" name="nik" id="nik" class="input-txt" value="<?php if (isset($nik)) echo $nik ?>"><br>
+                <input type="text" name="nik" id="nik" class="input-txt" value="<?php if (isset($nik)) echo $nik ?>" disabled><br>
             </div>
             <div class="error"><?php if (isset($error_nik)) echo $error_nik; ?></div>
             <br>
