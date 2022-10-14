@@ -1,12 +1,16 @@
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     /* background-color: #eaf6f6 !important; */
+}
+
+article {
+    margin-top: 50px;
 }
 
 .cont {
     display: flex;
     flex-direction: row;
-    background-color: #F2EAD3;
+    background-color: #f2ead3;
     padding: 10px;
     border-radius: 8px;
     margin: 0;
@@ -27,7 +31,7 @@ body {
 
 .profile {
     width: 200px;
-    background-color: #EE6F57;
+    background-color: #ee6f57;
     border-radius: 8px;
     display: flex;
     justify-content: center;
@@ -48,7 +52,7 @@ body {
 .btn-submit {
     border-style: none;
     padding: 10px;
-    background-color: #3CA64D;
+    background-color: #3ca64d;
     color: white;
     border-radius: 8px;
     padding-left: 20px;
@@ -58,7 +62,7 @@ body {
 .btn-cancel {
     border-style: none;
     padding: 10px;
-    background-color: #B53B3B;
+    background-color: #b53b3b;
     color: white;
     border-radius: 8px;
     padding-left: 20px;
@@ -83,33 +87,35 @@ body {
     text-align: center;
 }
 
-.prov-drop, .city-drop{
+.prov-drop,
+.city-drop {
     border: 1px black;
-    border-style: none  ;
+    border-style: none;
     padding: 20px;
     border-radius: 8px;
-    background-color: #8BBCCC;
+    background-color: #8bbccc;
     margin-top: 20px;
 }
 
-.prov-drop label, .city-drop label{
+.prov-drop label,
+.city-drop label {
     margin-bottom: 30px;
 }
 
-.src-btn{
+.src-btn {
     margin-top: 20px;
     width: 100%;
     border-style: none;
     padding: 6px;
     border-radius: 8px;
-    background-color: #06283D;
+    background-color: #06283d;
     color: white;
 }
 
 /* ====================================================================== css julius ============================================================== */
 
 .box {
-    background-color: #F2EAD3;
+    background-color: #f2ead3;
     padding: 10px;
     border-radius: 8px;
     margin: 0;
@@ -125,7 +131,6 @@ body {
     left: 25px;
     top: 22px;
 
-
     color: #000000;
 }
 
@@ -134,8 +139,6 @@ body {
     height: 15px;
     left: 36px;
     top: 82px;
-
-
 
     color: #000000;
 }
@@ -146,7 +149,7 @@ body {
     left: 159px;
     top: 76px;
 
-    background: #FFFFFF;
+    background: #ffffff;
     border-radius: 5px;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -158,7 +161,7 @@ body {
     left: 159px;
     top: 76px;
 
-    background: #FFFFFF;
+    background: #ffffff;
     border-radius: 5px white;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -170,7 +173,7 @@ body {
     left: 159px;
     top: 76px;
 
-    background: #FFFFFF;
+    background: #ffffff;
     border-radius: 5px white;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -197,7 +200,7 @@ body {
 .flexbox-item-1 {
     min-height: 300px;
     border-radius: 8px !important;
-    background-color: #EE6F57;
+    background-color: #ee6f57;
 }
 
 .flexbox-item-2 {
@@ -225,7 +228,7 @@ body {
 
 .card {
     /* box-shadow: 0 0.15rem 1.75rem 0 rgb(33 40 50 / 15%); */
-    border-right-width: 1px
+    border-right-width: 1px;
 }
 
 .btn {
@@ -237,7 +240,6 @@ body {
     padding: 10px;
     margin-left: 168%;
 }
-
 
 /* ===================== Style Gybran ============================================== */
 

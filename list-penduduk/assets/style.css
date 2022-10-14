@@ -2,14 +2,11 @@ body {
     background-color: #eaf6f6;
 }
 
-article {
+.content {
     margin: 20px;
     padding: 0;
     background-color: #ffffff;
-}
-
-article.detail {
-    margin-top: 20px;
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.39);
 }
 
 .container {
@@ -17,6 +14,7 @@ article.detail {
     /* box-shadow: ; */
 }
 
-.horizontal-center {
-    margin: 0 auto;
+.center-content {
+    margin: auto auto;
+    padding: 20px;
 }

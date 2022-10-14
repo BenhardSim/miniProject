@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="assets/style.css" />
     </head>
     <body>
+        <?php include('../header.html'); ?>
         <article class="container detail horizontal-center row align-items-center">
             <div class="img empty-profile col-md-4 horizontal-center">
                 <img src="assets/empty-profile.png" alt="foto profil kosong" width="200px;" />
