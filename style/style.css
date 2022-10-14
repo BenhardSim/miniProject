@@ -119,8 +119,18 @@ body {
     transform: translate(-50%, -50%);
 }
 
+.box2 {
+    height: 100%;
+    width: 100%;
+    /* top: 50%;
+    left: 50%; */
+    position: absolute;
+    transform: translate(35%, 0%);
+    margin: 10px;
+}
+
 .header {
-    width: 106px;
+    width: 306px;
     height: 15px;
     left: 25px;
     top: 22px;
