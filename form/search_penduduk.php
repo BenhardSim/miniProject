@@ -1,6 +1,6 @@
 <?php
 require_once('../lib/db_login.php');
-include('../header.html')
+include('../header.html');
 ?>
 <section class="cont-drop">
     <div class="prov-drop">

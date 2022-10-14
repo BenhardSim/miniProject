@@ -1,78 +1,22 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-body {
-    width: 100%;
-    min-height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(bg.jpg);
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.container {
-    width: 400px;
-    min-height: 400px;
-    background: #EE6F57;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0,0,0,.3);
-    padding: 40px 30px;
-}
-
-h1{
-    text-align: center;
-}
-
-.container .login-email .input-group input {
-    width: 100%;
-    height: 100%;
-    border: 2px solid #e7e7e7;
-    padding: 15px 20px;
-    font-size: 1rem;
-    border-radius: 30px;
-    background: #FFFFFF;
-    outline: none;
-    transition: .3s;
-}
-
-.container .login-email .input-group input:focus, .container .login-email .input-group input:valid {
-    border-color: #a29bfe;
-}
-
-.container .login-email .input-group .btn {
-    display: block;
-    width: 100%;
-    padding: 15px 20px;
-    text-align: center;
-    border: none;
-    background: #a29bfe;
-    outline: none;
-    border-radius: 30px;
-    font-size: 1.2rem;
-    color: #FFF;
-    cursor: pointer;
-    transition: .3s;
-}
-
-input-group{
-    transform: translateY(-5px);
-    background: #6c5ce7;
-}
-
-button{
-    border: none;
-    background-color: #B53B3B;
-    color: white;
-    padding: 10px;
-    border-radius: 10px;
-    /* Group 8 */
-    width: 100%;
-
-
-}
+.gradient-custom-2 {
+    /* fallback for old browsers */
+    background: #fccb90;
+    
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+    
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+    }
+    
+    @media (min-width: 768px) {
+    .gradient-form {
+    height: 100vh !important;
+    }
+    }
+    @media (min-width: 769px) {
+    .gradient-custom-2 {
+    border-top-right-radius: .3rem;
+    border-bottom-right-radius: .3rem;
+    }
+    }

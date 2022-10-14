@@ -4,7 +4,7 @@
 //         header("Location: login.php");
 //     }
 ?>
-<?php include('../header.html') ?>
+<?php include('../header.html'); ?>
 <?php
 require_once('../lib/db_login.php');
 if (isset($_GET['save'])) {

@@ -1,18 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>View Population</title>
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
-            crossorigin="anonymous"
-        />
-        <link rel="stylesheet" href="assets/style.css" />
-    </head>
-    <body>
+<?php include('../header.html'); ?>
         <article class="container detail horizontal-center row align-items-center">
             <div class="img empty-profile col-md-4 horizontal-center">
                 <img src="assets/empty-profile.png" alt="foto profil kosong" width="200px;" />
