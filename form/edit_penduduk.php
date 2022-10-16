@@ -6,7 +6,7 @@ session_start();
 ?>
 <?php require_once('../lib/db_login.php');
 
-
+$nik;
 
 // validasi nilai pada saat di submit
 if (isset($_GET['submit'])) {
@@ -68,6 +68,7 @@ if (isset($_GET['submit'])) {
         $query = "
         update `tb_penduduk`
         set 
+        nik = '" . $_GET['nik'] . "',
         nama = '" . $_GET['nama'] . "',
         jenis_kelamin =  '" . $_GET['jenis_kelamin'] . "',
         kota = '" . $_GET['kota'] . "',
@@ -123,7 +124,7 @@ if (isset($_GET['submit'])) {
         <form action="">
             <div>
                 <label for="NIK">NIK : </label><br>
-                <input type="text" name="nik" id="nik" class="input-txt" value="<?php if (isset($nik)) echo $nik ?>" disabled><br>
+                <input type="text" name="nik" id="nik" class="input-txt" value="<?php if (isset($nik)) echo $nik ?>" readonly="readonly"><br>
             </div>
             <div class="error"><?php if (isset($error_nik)) echo $error_nik; ?></div>
             <br>
